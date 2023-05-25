@@ -3,11 +3,7 @@ import MemberCount from "./components/MemberCount";
 import MemberList from "./components/MemberList";
 import Messages from "./components/Messages";
 import MessageForm from "./components/MessageForm";
-import {
-  getRandomName,
-  getRandomColor,
-  setMemberWithNameAndColor,
-} from "./utils/utils";
+import { getRandomName, getRandomColor, setMemberWithNameAndColor,} from "./utils/utils";
 import "./App.css";
 const { Scaledrone } = window;
 
