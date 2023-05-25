@@ -47,9 +47,13 @@ body {
   border: 1px solid #dfdfdf;
   padding: 10px 15px;
   font-size: 16px;
+  display: flex;
+  width: 50%;
 }
 .message-form__button {
+  display: flex;
   margin: 10px;
+  padding: 10px 15px;
 }
 .current-user {
  align-items: flex-end;
