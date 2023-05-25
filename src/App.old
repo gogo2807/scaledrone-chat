@@ -1,0 +1,65 @@
+import React, { useState, useEffect } from 'react';
+import MemberCount from './components/MemberCount';
+import MemberList from './components/MemberList';
+import Messages from './components/Messages';
+import MessageForm from './components/MessageForm';
+import './App.css';
+
+function App() {
+  const [drone, setDrone] = useState(null);
+  const [members, setMembers] = useState([]);
+
+  useEffect(() => {
+    const initializeDrone = () => {
+      const newDrone = new window.Scaledrone('cnWm9nv2npbI9inM');
+      setDrone(newDrone);
+
+      newDrone.on('open', () => {
+        console.log('Successfully connected to Scaledrone');
+        const room = newDrone.subscribe('chat-room');
+
+        room.on('members', (m) => {
+          setMembers(m.members);
+        });
+
+        room.on('member_join', (member) => {
+          setMembers((prevMembers) => {
+            if (Array.isArray(prevMembers)) {
+              return [...prevMembers, member];
+            }
+            return [member];
+          });
+        });
+        /* room.on('member_join', (member) => {
+          setMembers((prevMembers) => [...prevMembers, member]);
+        }); */
+
+        room.on('member_leave', (member) => {
+          setMembers((prevMembers) =>
+            prevMembers.filter((prevMember) => prevMember.id !== member.id)
+          );
+        });
+      });
+
+      newDrone.on('close', () => {
+        console.log('Connection was closed');
+      });
+    };
+
+    initializeDrone();
+  }, []);
+
+  const membersCount = members ? members.length : 0;
+  return (
+    <div>
+      <MemberCount count={membersCount} />
+      <MemberList members={members} />
+      <Messages drone={drone} />
+      <MessageForm drone={drone} /> 
+      {/* <Messages />
+      <MessageForm /> */}
+    </div>
+  );
+}
+
+export default App;
