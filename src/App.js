@@ -3,19 +3,27 @@ import MemberCount from "./components/MemberCount";
 import MemberList from "./components/MemberList";
 import Messages from "./components/Messages";
 import MessageForm from "./components/MessageForm";
-import { getRandomName, getRandomColor, setMemberWithNameAndColor,} from "./utils/utils";
-import "./App.css";
-const { Scaledrone } = window;
+import {
+  getRandomName,
+  getRandomColor,
+  setMemberWithNameAndColor,
+} from "./utils/utils";
+import "./styles";
 
+const { Scaledrone } = window;
 const whoami = setMemberWithNameAndColor();
+const scaleDroneChannelId = process.env.REACT_APP_SCALEDRONE_CHANNEL_ID;
+const scaledroneRoom = process.env.REACT_APP_SCALEDRONE_ROOM;
+
 function App() {
   const [drone, setDrone] = useState(null);
   const [members, setMembers] = useState([]);
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
+    //console.log(scaleDroneChannelId);
     const initializeDrone = () => {
-      const newDrone = new Scaledrone("cnWm9nv2npbI9inM", {
+      const newDrone = new Scaledrone(scaleDroneChannelId, {
         data: whoami,
       });
       setDrone(newDrone);
@@ -67,14 +75,18 @@ function App() {
   }, []);
   const handleSubmit = (message) => {
     drone.publish({
-      room: "observable-soba",
+      room: scaledroneRoom,
       message: message,
     });
     console.log(drone, message);
   };
   const membersCount = members ? members.length : 0;
+
   return (
     <div>
+      <div>
+        <h1 className="chat-header">Soba za priču</h1>
+      </div>
       <MemberCount count={membersCount} />
       <MemberList members={members} />
       <Messages
