@@ -18,7 +18,7 @@ function MessageForm({ onSubmit }) {
     <>
       <input
         className="message-form__input"
-        placeholder="Type a message..."
+        placeholder="Unesi poruku..."
         type="text"
         value={message}
         onChange={onChange}
