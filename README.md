@@ -27,7 +27,7 @@ Unutar src direktorija se nalaze 3 poddirektorija:
 Svaki od ovih direktorija sadrži datoteke vezane za ispravan rad aplikacije.
 
 ### Components
-Direktorij components sarži javascripte koji su vezane za određene radnje u aplikaciji. Skripte su slijedeće:
+Direktorij components sarži javascripte datoteke koje su vezane za određene radnje u aplikaciji. Skripte su slijedeće:
 - MemberCount.js - prikazuje ukupan broj korisnika aplikacije
 - MemberList.js - prikazuje listu korisnika aplikacije
 - MessageForm.js - zadužena za akcije oko slanja poruke
