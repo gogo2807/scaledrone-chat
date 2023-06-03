@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/MessageForm.css";
 
+/*useRef hookicu koristimo za dobivanje reference za input polje*/
+
 function MessageForm({ onSubmit }) {
   const [message, setMessage] = useState("");
   const inputRef = useRef(null);
