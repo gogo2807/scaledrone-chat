@@ -23,6 +23,7 @@ Unutar src direktorija se nalaze 3 poddirektorija:
 - components
 - styles
 - utils
+
 Svaki od ovih direktorija sadrži datoteke vezane za ispravan rad aplikacije.
 
 ### Components
