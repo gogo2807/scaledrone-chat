@@ -3,9 +3,13 @@
   padding: 15px;
   margin-bottom: 15px;
   display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
 }
 
 .member {
   padding-right: 10px;
   position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
 }
