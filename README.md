@@ -59,8 +59,11 @@ Naredba se može pokretati više puta. Prilikom novog pokretanja naredbe, postoj
 Aplikaciju je moguće pokrenuti i kao docker kontejner. Da bi je mogli pokrenuti u docker kontejneru potrebne je stvoriti docker image sa naredbom:
 - docker build -t webchat . -webchat je ime image kojeg ćemo stvoriti sa naredbom
 
-Nakon što se uspješno završi proces stvaranja image, aplikaciju možemo pokrenuti sa naredbom:
+Nakon što se uspješno završi proces stvaranja image, aplikaciju možemo pokrenuti sa naredbama:
 - docker run -p 8080:80 -name webchat webchat 
+- docker-compose up -d 
+
+Kada aplikaciju pokrećemo sa docker-compose naredbom, pokretanje traje duže, jer ova naredba radi build aplikacije pa joj treba više vremena za izvršavanje.
 
 Aplikacija je dostupna na slijedećim URL-ovima:
 - lokalno: http://localhost:8080/
