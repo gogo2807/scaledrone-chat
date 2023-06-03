@@ -2,14 +2,21 @@
   display: flex;
   flex-shrink: 0;
 }
+
 .message-form__input {
   flex-grow: 1;
   border: 2px solid #020202;
   padding: 10px 15px;
   font-size: 16px;
   display: flex;
-  width: 50%;
+  max-width: 400px;
+  height: auto;
+  min-height: 90px;
+  resize: vertical;
+  width: 75%;
+  box-sizing: border-box;
 }
+
 .message-form__button {
   display: flex;
   margin: 1px;
@@ -17,6 +24,6 @@
   border: 2px solid #000;
   border-radius: 10%;
   font-weight: bolder;
-  color: antiquewhite;
-  background-color: rgb(0, 17, 255);
+  color: #FAEBD7;
+  background-color: #0011ff;
 }
