@@ -8,8 +8,10 @@ Projektni zahtjevi glede reacta se mogu pogledati u package.json datoteci. Od os
 - html5
 - css3
 - javascript ES6
+
 Nakon što se kreira projektna struktura direktorija sa:
 - npx create-react-app scaledrone-chat
+
 potrebno je instalirati:
 - npm install react react-dom
 
