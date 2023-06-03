@@ -61,6 +61,7 @@ Aplikaciju je moguće pokrenuti i kao docker kontejner. Da bi je mogli pokrenuti
 
 Nakon što se uspješno završi proces stvaranja image, aplikaciju možemo pokrenuti sa naredbom:
 - docker run -p 8080:80 -name webchat webchat 
+
 Aplikacija je dostupna na slijedećim URL-ovima:
 - lokalno: http://localhost:8080/
 - putem mreže: http://ip:8080
