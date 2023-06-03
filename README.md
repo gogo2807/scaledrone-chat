@@ -63,7 +63,7 @@ Nakon što se uspješno završi proces stvaranja image, aplikaciju možemo pokre
 - docker run -p 8080:80 -name webchat webchat 
 - docker-compose up -d 
 
-Kada aplikaciju pokrećemo sa docker-compose naredbom, pokretanje traje duže, jer ova naredba radi build aplikacije pa joj treba više vremena za izvršavanje.
+Kada aplikaciju pokrećemo sa docker-compose naredbom, pokretanje traje duže, jer ova naredba radi stvaranje docker image aplikacije pa joj treba više vremena za izvršavanje.
 
 Aplikacija je dostupna na slijedećim URL-ovima:
 - lokalno: http://localhost:8080/
