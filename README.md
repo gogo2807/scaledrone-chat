@@ -52,5 +52,6 @@ Aplikacija je dostupna na URL-u:
 ## Stvaranje aplikacije
 Za stvaranje aplikacije potrebno je pokrenuti naredbu:
 - npm run build
+
 Naredba se može pokretati više puta. Prilikom novog pokretanja naredbe, postojeći build direktorij se pregazi sa novim podacima. 
 
