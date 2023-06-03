@@ -1,0 +1,14 @@
+/* Stilovi za desktop uređaje */
+@media only screen and (min-width: 1024px) {
+  /* Vaši stilovi za desktop */
+}
+
+/* Stilovi za tablet uređaje */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Vaši stilovi za tablet */
+}
+
+/* Stilovi za mobilne uređaje */
+@media only screen and (max-width: 767px) {
+  /* Vaši stilovi za mobilne uređaje */
+}
