@@ -3,7 +3,6 @@ import { getRandomName, getRandomColor } from "../utils/utils";
 
 function MemberList({ members }) {
   // Check the received members
-  // console.log("Received members in MemberList:", members);
   console.log("Value of members prop:", members);
 
   return (
