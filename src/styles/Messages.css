@@ -12,4 +12,15 @@
   padding: 5px 0;
   flex-direction: column;
   display: inline-block;
- }
+}
+
+.current-user {
+  align-items: flex-end;
+  display: flex;
+}
+
+.other-user {
+  align-items: flex-start;
+  display: flex;
+}
+
