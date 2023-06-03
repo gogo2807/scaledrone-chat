@@ -9,20 +9,3 @@ body {
   background-color: #fff;
   color: #000;
 }
-
-.chat-header {
-  overflow: visible;
-  width: 100%;
-  text-align: center;
-  color: #faebd7;
-  background-color: #0011ff;
-}
-
-.current-user {
-  align-items: flex-end;
-  display: flex;
-}
-.other-user {
-  align-items: flex-start;
-  display: flex;
-}
