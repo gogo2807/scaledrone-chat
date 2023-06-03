@@ -1,6 +1,10 @@
 # O aplikaciji
 Soba za pričanje je web-chat aplikacija bazirana na html-u, css-u, javascriptu, reactjs i scaledronu.Jednostavnog dizajna i načina rada. Aplikacija radi osnovne stvari - šalje i prima poruke. Korisnici aplikacije dobivaju nasumično generirana imena i ta imena su različitih boja zbog lakšeg razlikovanja, boje su također nasumično generirane. Poruke koje korisnik šalje se prikazuju u desnom dijelu aplikacije, a dolazne poruke se prikazuju u lijevom dijelu aplikacije.
-![image](https://github.com/gogo2807/scaledrone-chat/assets/60366714/c0d77172-1c0a-45f7-a99f-e22ba0aff7ea)
+<img 
+     src="https://github.com/gogo2807/scaledrone-chat/assets/60366714/c0d77172-1c0a-45f7-a99f-e22ba0aff7ea"
+     title="Soba za priču"
+     style="display": inline-block; margin: 0 auto; max-width: 300px">
+     
 ## Projektni zahtjevi
 Projektni zahtjevi glede reacta se mogu pogledati u package.json datoteci. Od ostalih zahtjeva tu su:
 - html5
