@@ -44,6 +44,7 @@ Ovaj direktorij sadrži samo jednu datoteku utils.js. Utils.js je zadužen za ge
 ## Pokretanje aplikacije
 U rootu projektnog direktorija aplikacije se pokreće sa:
 - npm start
+
 Aplikacije je dostupna na URL-u: 
 - lokalno: http://localhost:3000/
 - putem mreže: http://ip:3000 
