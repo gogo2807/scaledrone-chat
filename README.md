@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# O aplikaciji
+Soba za pričanje je web-chat aplikacija bazirana na html-u, css-u, javascriptu, reactjs i scaledronu.Jednostavnog dizajna i načina rada. Aplikacija radi osnovne stvari - šalje i prima poruke. Korisnici aplikacije dobivaju nasumično generirana imena i ta imena su različitih boja zbog lakšeg razlikovanja, boje su također nasumično generirane. Poruke koje korisnik šalje se prikazuju u desnom dijelu aplikacije, a dolazne poruke se prikazuju u lijevom dijelu aplikacije.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Projektni zahtjevi
+Projektni zahtjevi glede reacta se mogu pogledati u package.json datoteci. Od ostalih zahtjeva tu su:
+-html5
+-css3
+-javascript ES6
+Nakon što se kreira projektna struktura direktorija sa:
+- npx create-react-app scaledrone-chat
+potrebno je instalirati:
+- npm install react react-dom
 
-## Available Scripts
+## Environment varijable
+Environment varijable su spremljene u zasebnoj datoteci -.env koja se nalazi u rootu projektnog direktorija
 
-In the project directory, you can run:
+## Struktura projekta
+Unutar src direktorija se nalaze 3 poddirektorija:
+-components
+-styles
+-utils
+Svaki od ovih direktorija sadrži datoteke vezane za ispravan rad aplikacije.
 
-### `npm start`
+### Components
+Direktorij components sarži javascripte koji su vezane za određene radnje u aplikaciji. Skripte su slijedeće:
+-MemberCount.js - prikazuje ukupan broj korisnika aplikacije
+-MemberList.js - prikazuje listu korisnika aplikacije
+-MessageForm.js - zadužena za akcije oko slanja poruke
+-Messages.js - prikazuje poruke korisnika
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Styles
+Direktorij styles sadrži css datoteke zadužene za dizajn same aplikacije:
+-ChatHeader.css
+-media.css - sadrži stilove za desktop, tablet i mobilne uređaje, a zatim se ti stilovi uvoze u sve ostale css datoteke
+-MemberCount.css
+-MemberList.css
+-MessageForm.css
+-Messages.css 
+-index.js - centralna css datoteka gdje su uvedeni svi css stilovi, kako se ne bi morali svi stilovi pojedinačno uvoziti u App.js datoteku.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Utils
+Ovaj direktorij sadrži samo jednu datoteku utils.js. Utils.js je zadužen za generiranje nasumičnih imena korisnika i boja tih imena.
 
-### `npm test`
+## Pokretanje aplikacije
+U rootu projektnog direktorija aplikacije se pokreće sa:
+- npm start
+Aplikacije je dostupna na URL-u: 
+- lokalno: http://localhost:3000/
+- putem mreže: http://ip:3000 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Stvaranje aplikacije
+Za stvaranje aplikacije potrebno je pokrenuti naredbu:
+- npm run build
+Naredba se može pokretati više puta. Prilikom novog pokretanja naredbe, postojeći build direktorij se pregazi sa novim podacima. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
