@@ -93,6 +93,7 @@ function App() {
         whoami={whoami}
         messages={messages}
         getRandomName={getRandomName}
+        getRandomColor={getRandomColor}
       />
       <MessageForm onSubmit={handleSubmit} />
     </div>
