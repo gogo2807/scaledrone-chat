@@ -1,5 +1,6 @@
 import React from "react";
 import { getRandomName, getRandomColor } from "../utils/utils";
+import "../styles/MemberList.css";
 
 function MemberList({ members }) {
   // Check the received members
