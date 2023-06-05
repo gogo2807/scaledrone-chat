@@ -2,6 +2,10 @@ import React from "react";
 import { getRandomName, getRandomColor } from "../utils/utils";
 import "../styles/MemberList.css";
 
+/*Komponent prikazuje listu članova.Komponenta prima members prop koji sadrži
+informacije o članovima, a zatim prikazuje imena članova i dodjeljuje im boju
+teksta prema clientData objektu člana.*/
+
 function MemberList({ members }) {
   // Check the received members
   console.log("Value of members prop:", members);
