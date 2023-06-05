@@ -1,4 +1,9 @@
 import React from "react";
+import "../styles/Messages.css";
+
+/*Ova komponenta prikazuje popis poruka koje se predaju kao parametar messages.
+Svaka poruka se prikazuje unutar <div> elemenata s odgovarajućim klasama ovisno
+o tome tko je korisnik poruke. */
 
 function Messages({ whoami, messages }) {
   console.log(messages, whoami);
