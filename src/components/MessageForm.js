@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/MessageForm.css";
 
+/*Komponenta omogućuje prikazivanje forme za unos poruka,
+praćenje promjena unosa teksta, slanje poruke pritiskom na 
+tipku "Enter" ili klikom na gumb, te dinamičko podešavanje 
+visine tekstualnog polja na temelju visine sadržaja.*/
 /*useRef hookicu koristimo za dobivanje reference za input polje*/
 
 function MessageForm({ onSubmit }) {
