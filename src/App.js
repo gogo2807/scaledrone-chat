@@ -14,11 +14,10 @@ import "./styles";
 za komunikaciju s ScaleDrone servisom, upravljanje članovima
 sobe i prikazivanje poruka.*/
 
-
 const { Scaledrone } = window;
 const whoami = setMemberWithNameAndColor();
 const scaleDroneChannelId = process.env.REACT_APP_SCALEDRONE_CHANNEL_ID;
-const scaledroneRoom = process.env.REACT_APP_SCALEDRONE_ROOM;
+const scaleDroneRoom = process.env.REACT_APP_SCALEDRONE_ROOM;
 
 function App() {
   const [drone, setDrone] = useState(null);
@@ -35,7 +34,7 @@ function App() {
 
       console.log("Successfully connected to Scaledrone");
       // need to put observable- before name of room for subscriptions to work
-      const room = newDrone.subscribe("observable-soba");
+      const room = newDrone.subscribe(scaleDroneRoom);
       room.on("message", (message) => {
         // missing 000 at the end of timestamp thus multiply with 1000
         const date = new Date(message.timestamp * 1000);
@@ -80,7 +79,7 @@ function App() {
   }, []);
   const handleSubmit = (message) => {
     drone.publish({
-      room: scaledroneRoom,
+      room: scaleDroneRoom,
       message: message,
     });
     console.log(drone, message);
