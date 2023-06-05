@@ -5,6 +5,15 @@ function MemberList({ members }) {
   // Check the received members
   console.log("Value of members prop:", members);
 
+  /* Definirane varijable randomName i randomColor da izbjegnem dosadna upozorenja.
+  Varijable se inicijaliziraju s vrijednostima koje se dobiju pozivanjem funkcija 
+  getRandomName i getRandomColor */
+
+  const randomName = getRandomName();
+  console.log("Random Name:", randomName);
+  const randomColor = getRandomColor();
+  console.log("Random Color:", randomColor);
+  
   return (
     <div className="members-list">
       {members.length > 0 &&
