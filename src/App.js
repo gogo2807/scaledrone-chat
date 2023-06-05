@@ -10,6 +10,11 @@ import {
 } from "./utils/utils";
 import "./styles";
 
+/*Ova komponenta predstavlja srce aplikacije i sadrži logiku
+za komunikaciju s ScaleDrone servisom, upravljanje članovima
+sobe i prikazivanje poruka.*/
+
+
 const { Scaledrone } = window;
 const whoami = setMemberWithNameAndColor();
 const scaleDroneChannelId = process.env.REACT_APP_SCALEDRONE_CHANNEL_ID;
